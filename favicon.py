@@ -5,7 +5,7 @@ import csv
 
 #font = ImageFont.truetype('./fonts/montserrat/Montserrat-Medium.otf', size=600)
 font = ImageFont.truetype('./fonts/metropolis/Metropolis-Bold.otf', size=600)
-(x, y) = (0, -100) # x = 22 for the I in Roboto Mono font
+(x, y) = (100, -150) # x = 22 for the I in Roboto Mono font
 color = 'rgb(255, 255, 255)' # white color
 dotcolor = 'rgb(74,224,149)'
 
@@ -16,6 +16,7 @@ message1 = 'p'
 draw.text((x, y), message1, fill=color, font=font)
 width, height = font.getsize(message1)
 
-image = image.crop((0, 0, width, height - 30))
+image = image.crop((80, 0, width + 120, height - 30 - 115))
 
+print(image.size)
 image.save('./favicon1.png')
